@@ -6,12 +6,12 @@ const Counter = () => {
   // console.log(counter);
 
   const incrementHandler=()=>{
-    dispatch({type:'incrementby5'})
+    dispatch({type:'incrementby5',value:5})
   }
 
 
   const decrementHandler=()=>{
-    dispatch({type:'decrementby5'})
+    dispatch({type:'decrementby5',value:5})
   }
 
   const toggleCounterHandler = () => {};
