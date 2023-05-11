@@ -12,13 +12,13 @@ const counterSliceState = createSlice(
         state.counter++;
       },
       incrementby5(state, action) {
-        state.counter = state.counter + action.value;
+        state.counter = state.counter + action.payload;
       },
       decrement(state) {
         state.counter--;
       },
       decrementby5(state, action) {
-        state.counter = state.counter - action.value;
+        state.counter = state.counter - action.payload;
       },
       toggle(state) {
         state.showCounter = !state.showCounter;
@@ -31,6 +31,5 @@ const Store = configureStore({
   reducer: counterSliceState.reducer,
 });
 
+export const counterActions=counterSliceState.actions;
 export default Store;
-
-// configure store takes in multipule reducers from different createslice and merge them them all into one reducer function .  
