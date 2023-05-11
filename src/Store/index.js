@@ -32,3 +32,5 @@ const Store = configureStore({
 });
 
 export default Store;
+
+// configure store takes in multipule reducers from different createslice and merge them them all into one reducer function .  
