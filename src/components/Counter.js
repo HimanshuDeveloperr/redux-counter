@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { counterActions } from "../Store/index";
 const Counter = () => {
   const dispatch=useDispatch();
-  const counter = useSelector((state) => state.counter);
-  const setCounterToggle=useSelector(state=>state.showCounter)
+  const counter = useSelector((state) => state.counter.counter);//it tells that we are taking state from the counter slice state
+  const setCounterToggle=useSelector(state=>state.counter.showCounter)
   // console.log(counter);
 
   const incrementHandler=()=>{
